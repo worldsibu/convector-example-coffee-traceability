@@ -1,4 +1,13 @@
-# coffee - coffee
+# Coffee Traceability
+## Developed with [Convector](https://covalentx.com/convector) by [Covalent](https://covalentx.com)
+
+This project covers the creation of multiple participants creating a coffee batch in conjuntion, then selle it to a coffee roaster participant. In the roast process you usually combine different grain batches, so the code takes that into consideration to be able to provide which percentage of the final result belongs to the original producers.
+
+Here's a diagram explaining the overall process
+
+![Coffee Diagram](./assets/project-diagram.jpg)
+
+---
 
 This awesome project was created automatically with <a href="https://github.com/worldsibu/convector-cli" target="_blank">Convector CLI</a>.
 By default new Convector projects locally include <a href="https://github.com/worldsibu/hurley">Hurley</a> to manage your development environment seamlessly, so you don't have to worry about setting up the network and hard ways to install  and upgrade your chaincodes.
@@ -8,13 +17,15 @@ By default new Convector projects locally include <a href="https://github.com/wo
 ```
 # Install dependencies - From the root of your project
 npm i
+
 # Create a new development blockchain network  - From the root of your project
 npm run env:restart
+
 # Install your smart contract
 npm run cc:start -- coffee
-# Make a testing call to create a record in the ledger
-# Beware that the first call may fail with a timeout! Just happens the first time
-hurl invoke coffee coffee_create "{\"name\":\"my first request\",\"id\":\"0001\",\"created\":0,\"modified\":0}"
+
+# Run the end-to-end tests invoking the ledger
+npm run test:e2e
 ```
 
 ## About Hurley
@@ -93,11 +104,12 @@ npm run cc:upgrade -- coffee 1.2
 
 ```
 npm run test
+npm run test:e2e
 ```
 
-> Check all the information to work with Convector <a href="https://worldsibu.github.io/convector" target="_blank">in the DOCS site</a>.
+> Check all the information to work with Convector <a href="https://docs.covalentx.com/convector" target="_blank">in the DOCS site</a>.
 
 ## Collaborate to the Convector Suite projects
 
-* <a href="https://discord.gg/twRwpWt" target="_blank">Discord chat with the community</a>
+* <a href="https://community.covalentx.com" target="_blank">Discord chat with the community</a>
 * <a href="https://github.com/worldsibu" target="_blank">Convector projects</a>
