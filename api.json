@@ -1,0 +1,52 @@
+[
+  {
+    "function": "register",
+    "controller": "ParticipantController",
+    "verb": "post"
+  },
+  {
+    "function": "get",
+    "controller": "ParticipantController",
+    "verb": "get"
+  },
+  {
+    "function": "getAll",
+    "controller": "ParticipantController",
+    "verb": "get"
+  },
+  {
+    "function": "createGrainBatch",
+    "controller": "CoffeeController",
+    "verb": "post"
+  },
+  {
+    "function": "getGrainBatch",
+    "controller": "CoffeeController",
+    "verb": "get"
+  },
+  {
+    "function": "getAllGrainBatches",
+    "controller": "CoffeeController",
+    "verb": "get"
+  },
+  {
+    "function": "sellGrainBatch",
+    "controller": "CoffeeController",
+    "verb": "post"
+  },
+  {
+    "function": "createToastBatch",
+    "controller": "CoffeeController",
+    "verb": "post"
+  },
+  {
+    "function": "getToastBatch",
+    "controller": "CoffeeController",
+    "verb": "get"
+  },
+  {
+    "function": "getAllToastBatches",
+    "controller": "CoffeeController",
+    "verb": "get"
+  }
+]

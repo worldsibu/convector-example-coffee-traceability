@@ -1,0 +1,16 @@
+{
+  "skipInit": true,
+  "txTimeout": 300000,
+  "controllers": [
+    {
+      "name": "coffee-cc",
+      "version": "file:./packages/coffee-cc",
+      "controller": "CoffeeController"
+    },
+    {
+      "name": "participant-cc",
+      "version": "file:./packages/participant-cc",
+      "controller": "ParticipantController"
+    }
+  ]
+}
