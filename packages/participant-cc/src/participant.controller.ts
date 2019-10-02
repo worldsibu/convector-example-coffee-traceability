@@ -23,6 +23,7 @@ export class ParticipantController extends ConvectorController<ChaincodeTx> {
 
     participant.identity = this.sender;
     await participant.save();
+    this.tx.stub.setEvent('UserRegister', { participant });
   }
 
   @Invokable()

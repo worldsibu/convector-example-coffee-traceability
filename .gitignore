@@ -67,3 +67,4 @@ dist
 
 # Generated chaincode packages
 chaincode-*
+config

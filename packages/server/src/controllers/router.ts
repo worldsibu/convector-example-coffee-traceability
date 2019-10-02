@@ -1,5 +1,7 @@
 import * as express from 'express';
-import { 
+import { WithWebsocketMethod } from 'express-ws';
+import { listenTo } from '../convector';
+import {
     ParticipantController_register_post,
     ParticipantController_get_get,
     ParticipantController_getAll_get,
@@ -9,8 +11,10 @@ import {
     CoffeeController_sellGrainBatch_post,
     CoffeeController_createToastBatch_post,
     CoffeeController_getToastBatch_get,
-    CoffeeController_getAllToastBatches_get } from './controllers'
+    CoffeeController_getAllToastBatches_get } from './controllers';
+export {WithWebsocketMethod};
 export default express.Router()
+.ws('/events', (ws) => listenTo(ws))
 .post('/participant/register', ParticipantController_register_post)
 .get('/participant/get/:id', ParticipantController_get_get)
 .get('/participant/getAll', ParticipantController_getAll_get)

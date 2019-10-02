@@ -1,10 +1,14 @@
 import * as express from 'express';
+import * as expressWs from 'express-ws';
 import * as bodyParser from 'body-parser';
 import { port as serverPort } from './env';
-import router from './controllers/router';
 
 const app: express.Application = express();
 const port = serverPort;
+
+expressWs(app);
+
+import router from './controllers/router';
 
 app.use(bodyParser.urlencoded({
     extended: true,

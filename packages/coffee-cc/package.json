@@ -11,7 +11,7 @@
     "clean": "rimraf dist client",
     "build": "npm run clean && tsc",
     "prepare": "npm run build",
-    "test": "mocha -r ts-node/register tests/*.spec.ts --reporter spec",
+    "test": "mocha -r ts-node/register tests/*.spec.ts -t 300000 --reporter spec",
     "test:debug": "mocha --inspect -r ts-node/register tests/*.spec.ts --reporter spec",
     "test:e2e": "mocha -r ts-node/register tests/*.e2e.ts -t 300000 --reporter spec"
   },

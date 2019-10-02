@@ -1,0 +1,13 @@
+{
+  "channels": ["ch1"],
+  "topology": {
+    "org1": {
+      "channels": ["ch1"],
+      "users": ["ProducerA", "ProducerB", "Roaster"]
+    },
+    "org2": {
+      "channels": ["ch1"],
+      "users": ["CustomerA"]
+    }
+  }
+}
